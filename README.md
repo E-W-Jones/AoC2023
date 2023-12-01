@@ -1,2 +1,4 @@
-# AoC2023
-Advent of Code 2023 Solutions
+# Advent of Code 2023
+My solutions to the [Advent of Code](https://adventofcode.com/) problems.
+
+- [x] Day 1: Trebuchet?!
