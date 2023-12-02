@@ -9,5 +9,6 @@
 DIR="Day $1"
 
 mkdir "$DIR"
+touch "$DIR/sample_input.txt"
 touch "$DIR/input.txt"
 touch "$DIR/day$1.py"
