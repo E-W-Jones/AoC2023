@@ -7,4 +7,4 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [x] Day 4: Scratchcards
 
 # Further Optimizations
-- [] Day 4: Don't brute force through all cards on task 2
+- [ ] Day 4: Don't brute force through all cards on task 2
