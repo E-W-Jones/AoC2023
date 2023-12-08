@@ -5,7 +5,7 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [x] Day 2: Cube Conundrum
 - [x] Day 3: Gear Ratios
 - [x] Day 4: Scratchcards
-- [ ] Day 5: If You Give A Seed A Fertilizer
+- [x] Day 5: If You Give A Seed A Fertilizer
 
 # Further Optimizations
 - [ ] Day 4: Don't brute force through all cards on task 2
