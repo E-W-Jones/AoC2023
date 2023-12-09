@@ -6,7 +6,7 @@ def parse_line(line):
     numbers = [int(x) for x in numbers_string.split()]
     return winning_numbers, numbers, card_number
 
-def count_matches(winning_numbers, numbers):
+def count_matches(winning_numbers, numbers, *args):
     return sum([int(number in winning_numbers) for number in numbers])
 
 def points(winning_numbers, numbers, *args):
@@ -49,6 +49,24 @@ def task2():
 
     print(f"There are {total_cards} flashcards in total")    
 
+def task2():
+    # This method works faster by calculating once which cards give you which other cards
+    # And instead of just going "I have one card 2, calculate that result. I have another card 2, calculate that result."
+    # we instead say "If card 1 gives you a 3, and card 2 gives you a 3, you have 2 3s total."
+    cards = []
+
+    with open("input.txt", "r") as filein:
+        for card, line in enumerate(filein.readlines()):
+            count = count_matches(*parse_line(line))
+            cards.append(range(card+1, card+count+1))
+
+    N = len(cards)
+    total = [1] * N
+    for i in range(N):
+        for card in cards[i]:
+            total[card] += total[i]
+    print(f"You have a total of {sum(total)} scratchcards")
+    
 
 if __name__ == "__main__":
     task1()
