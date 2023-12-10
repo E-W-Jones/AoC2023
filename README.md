@@ -7,7 +7,7 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [x] Day 4: Scratchcards
 - [x] Day 5: If You Give A Seed A Fertilizer
 - [x] Day 6: Wait For It
-- [ ] Day 7: Camel Cards
+- [x] Day 7: Camel Cards
 - [ ] Day 8: Haunted Wasteland
 
 # Further Optimizations
