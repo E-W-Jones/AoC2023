@@ -8,7 +8,10 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [x] Day 5: If You Give A Seed A Fertilizer
 - [x] Day 6: Wait For It
 - [x] Day 7: Camel Cards
-- [ ] Day 8: Haunted Wasteland
+- [x] Day 8: Haunted Wasteland
+- [ ] Day 9: Mirage Maintenance
+- [ ] Day 10: Pipe Maze
+- [ ] Day 11: Cosmic Expansion
 
 # Further Optimizations
 - [x] Day 4: Don't brute force through all cards on task 2
