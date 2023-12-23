@@ -15,7 +15,7 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [ ] Day 12: Hot Springs
 - [x] Day 13: Point of Incidence
 - [x] Day 14: Parabolic Reflector Dish
-- [ ] Day 15: Lens Library
+- [x] Day 15: Lens Library
 - [ ] Day 16: The Floor Will Be Lava
 - [ ] Day 17: ???
 - [ ] Day 18: ???
