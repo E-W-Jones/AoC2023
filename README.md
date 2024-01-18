@@ -12,12 +12,12 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [x] Day 9: Mirage Maintenance
 - [x] Day 10: Pipe Maze
 - [x] Day 11: Cosmic Expansion
-- [ ] Day 12: Hot Springs
+- [x] Day 12: Hot Springs
 - [x] Day 13: Point of Incidence
 - [x] Day 14: Parabolic Reflector Dish
 - [x] Day 15: Lens Library
 - [x] Day 16: The Floor Will Be Lava
-- [ ] Day 17: ???
+- [ ] Day 17: Clumsy Crucible
 - [ ] Day 18: ???
 - [ ] Day 19: ???
 - [ ] Day 20: ???

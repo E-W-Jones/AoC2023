@@ -1,3 +1,5 @@
+from functools import cache
+
 def read_input(filename):
     conditions, groupings = [], []
     with open(filename, "r") as filein:
@@ -7,60 +9,69 @@ def read_input(filename):
             groupings.append(tuple(map(int, grouping.split(","))))
     return conditions, groupings
 
-def check_grouping(condition, grouping):
-    # print(condition)
-    index = 0
-    running_total = 1 if condition[0] == "#" else 0
-    for i in range(1, len(condition.rstrip('.'))):
-        # print("\t"+condition)
-        # print("\t"+" "*i + "^")
-        if condition[i] == '#':
-            running_total += 1
-            if running_total > grouping[index]:
-                return False
-        elif condition[i-1] == "#" and condition[i] == '.':
-            if running_total != grouping[index]:
-                return False
-            if index == len(grouping) - 1:
-                return False
-            else:
-                index += 1
-            # print(index, len(grouping))
-            running_total = 0
+@cache
+def recursive(string, groups):
+    """
+    Based on https://advent-of-code.xavd.id/writeups/2023/day/12/
 
-    return index == len(grouping)-1 and running_total == grouping[index]
+    Go through the string/groups to see if it is possible to build that
+    collection of groups from the current string, and if it is, how many ways
+    there are.
 
-def generate_conditions_naive(condition):
-    conditions = ['']
-    for i, char in enumerate(condition):
-        if char == '?':
-            while len(conditions[0]) == i:
-                cond = conditions.pop(0)
-                conditions += [cond + '.', cond + '#']
+    Designed to break it down using recursion + caching so we end up with lots
+    of small problems we've already solved
+    """
+    # print(string, groups)
+    if not string:    # We have ran out of springs we could use.
+        if groups:    # This will be invalid as we're trying to assign springs
+            return 0  # that don't exist 
+        else:         # This is fine, we've just happily ran off the end of our
+            return 1  # string
+    
+    if not groups:         # We've ran out of groups of springs
+        if '#' in string:  # We have springs that'll be unaccounted for, so
+            return 0       # invalid
         else:
-            conditions = [cond + char for cond in conditions]
-    return conditions
-
-def generate_conditions(condition):
-    # Need to be smarter! But not entirely sure how
-    # Maybe some sort of dynamic/recursive soln to look at just the number instead of all the options?
-    # OR we just be smarter about task 2? Bc a lot of the solutions will be similar
-    pass
-
-generate_conditions = generate_conditions_naive
+            return 1
+    
+    if string[0] == ".":  # The first character is '.' which does nothing
+        return recursive(string[1:], groups)
+    
+    if string[0] == "?":  # The first character is '?', take sum of branches:
+        return ( recursive('#'+string[1:], groups)  # ? is a #
+               + recursive(string[1:], groups)      # ? is a ., but we ignore .
+               )
+    
+    if string[0] == "#":
+        # There are a couple of checks we need to make:
+        potential_group = groups[0]
+        # Are there actually enough characters in the string to make the group
+        # (This seems like one we could do at the beginning)
+        if len(string) < potential_group:
+            return 0
+        # Is this one continguous group?
+        if '.' in string[:potential_group]:
+            return 0
+        # Is it possible for the group to end?:
+        # if we have ###, this can't be a group of 2, but ##? could be
+        # If we can't end the group, then its invalid
+        if not(len(string) == potential_group or string[potential_group] != "#"):
+            return 0
+        # Otherwise we're all good! We've found a group
+        return recursive(string[potential_group+1:], groups[1:])
+    
+    # If we've made it to here, something has gone wrong
+    raise ValueError("Invalid arguments:"
+                     "we have exhausted all recursive possiblities")
 
 def count_arrangments(conditions, groupings):
     count = 0
     for condition, grouping in zip(conditions, groupings):
-        # print(condition)
-        def filter_by(condition):
-            return check_grouping(condition, grouping)
-        valid = filter(filter_by, generate_conditions(condition))
-        count += len(list(valid))
+        count += recursive(condition, grouping)
     return count
 
 def main():
-    conditions, groupings = read_input("sample_input.txt")
+    conditions, groupings = read_input("input.txt")
     # --- Task 1 ---
     # Iterate through each record
     count = count_arrangments(conditions, groupings)
