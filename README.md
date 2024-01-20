@@ -17,7 +17,7 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [x] Day 14: Parabolic Reflector Dish
 - [x] Day 15: Lens Library
 - [x] Day 16: The Floor Will Be Lava
-- [ ] Day 17: Clumsy Crucible
+- [x] Day 17: Clumsy Crucible
 - [ ] Day 18: ???
 - [ ] Day 19: ???
 - [ ] Day 20: ???
@@ -33,3 +33,4 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [ ] Day 6: Vectorize w/ numpy
 - [ ] Day 9: Is there a way to remove the need for lists on part 2?
 - [ ] Day 16: Currently takes 11 cpu hours to run. I have no idea why mine takes so much longer. Could be that I'm copying the entire list for a beam? Moving around all that memory would be annoying. As far as I'm aware, I'm bailing out at the first possible instance.
+- [ ] Day 17: ... Pathfinding is not my strong suite.
