@@ -19,7 +19,7 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [x] Day 16: The Floor Will Be Lava
 - [x] Day 17: Clumsy Crucible
 - [x] Day 18: Lavaduct Lagoon
-- [ ] Day 19: ???
+- [x] Day 19: Aplenty
 - [ ] Day 20: ???
 - [ ] Day 21: ???
 - [ ] Day 22: ???
