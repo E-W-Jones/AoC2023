@@ -20,7 +20,7 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [x] Day 17: Clumsy Crucible
 - [x] Day 18: Lavaduct Lagoon
 - [x] Day 19: Aplenty
-- [ ] Day 20: ???
+- [x] Day 20: Pulse Propagation
 - [ ] Day 21: ???
 - [ ] Day 22: ???
 - [ ] Day 23: ???
@@ -34,3 +34,4 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [ ] Day 9: Is there a way to remove the need for lists on part 2?
 - [ ] Day 16: Currently takes 11 cpu hours to run. I have no idea why mine takes so much longer. Could be that I'm copying the entire list for a beam? Moving around all that memory would be annoying. As far as I'm aware, I'm bailing out at the first possible instance.
 - [ ] Day 17: ... Pathfinding is not my strong suite.
+- [ ] Day 20: Convince myself the part 2 logic makes sense
