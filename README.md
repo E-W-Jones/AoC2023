@@ -23,9 +23,9 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [x] Day 20: Pulse Propagation
 - [ ] Day 21: Step Counter
 - [x] Day 22: Sand Slabs
-- [ ] Day 23: ???
-- [ ] Day 24: ???
-- [ ] Day 25: ???
+- [x] Day 23: A Long Walk
+- [ ] Day 24: Never Tell Me The Odds
+- [ ] Day 25: Snowverload
 
 # Further Optimizations
 - [x] Day 4: Don't brute force through all cards on task 2
@@ -36,3 +36,4 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [ ] Day 17: ... Pathfinding is not my strong suite.
 - [ ] Day 20: Convince myself the part 2 logic makes sense
 - [ ] Day 22: Can we drop the bricks faster?
+- [ ] Day 23: Currently could be simulating each sub_path more than once, cutting back would be useful
