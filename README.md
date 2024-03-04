@@ -24,7 +24,7 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [ ] Day 21: Step Counter
 - [x] Day 22: Sand Slabs
 - [x] Day 23: A Long Walk
-- [ ] Day 24: Never Tell Me The Odds
+- [x] Day 24: Never Tell Me The Odds
 - [ ] Day 25: Snowverload
 
 # Further Optimizations
