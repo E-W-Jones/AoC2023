@@ -21,7 +21,7 @@ My solutions to the [Advent of Code](https://adventofcode.com/) problems.
 - [x] Day 18: Lavaduct Lagoon
 - [x] Day 19: Aplenty
 - [x] Day 20: Pulse Propagation
-- [ ] Day 21: Step Counter
+- [x] Day 21: Step Counter
 - [x] Day 22: Sand Slabs
 - [x] Day 23: A Long Walk
 - [x] Day 24: Never Tell Me The Odds
